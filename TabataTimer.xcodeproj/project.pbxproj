@@ -9,19 +9,27 @@
 /* Begin PBXBuildFile section */
 		051983CA2460145D00AB5E75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051983C92460145D00AB5E75 /* AppDelegate.swift */; };
 		051983CC2460145D00AB5E75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051983CB2460145D00AB5E75 /* SceneDelegate.swift */; };
-		051983CE2460145D00AB5E75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051983CD2460145D00AB5E75 /* ViewController.swift */; };
+		051983CE2460145D00AB5E75 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051983CD2460145D00AB5E75 /* MainScreenViewController.swift */; };
 		051983D32460145D00AB5E75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 051983D22460145D00AB5E75 /* Assets.xcassets */; };
 		051983D62460145D00AB5E75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 051983D42460145D00AB5E75 /* LaunchScreen.storyboard */; };
+		0574E4AE246024030081FCD0 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0574E4AD246024030081FCD0 /* MainScreenView.swift */; };
+		05AEC5A624602F7500C35A0F /* MusicControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AEC5A524602F7500C35A0F /* MusicControlView.swift */; };
+		05AEC5AA246034E600C35A0F /* UIView+TabataTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AEC5A9246034E600C35A0F /* UIView+TabataTimer.swift */; };
+		05AEC5AE2460748400C35A0F /* MusicPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AEC5AD2460748400C35A0F /* MusicPlayerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		051983C62460145D00AB5E75 /* TabataTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabataTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		051983C92460145D00AB5E75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		051983CB2460145D00AB5E75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		051983CD2460145D00AB5E75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		051983CD2460145D00AB5E75 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		051983D22460145D00AB5E75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		051983D52460145D00AB5E75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		051983D72460145D00AB5E75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0574E4AD246024030081FCD0 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		05AEC5A524602F7500C35A0F /* MusicControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicControlView.swift; sourceTree = "<group>"; };
+		05AEC5A9246034E600C35A0F /* UIView+TabataTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TabataTimer.swift"; sourceTree = "<group>"; };
+		05AEC5AD2460748400C35A0F /* MusicPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +72,11 @@
 		051983DD2460153B00AB5E75 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				05AEC5A8246034B800C35A0F /* Extensions */,
 				051983C92460145D00AB5E75 /* AppDelegate.swift */,
 				051983CB2460145D00AB5E75 /* SceneDelegate.swift */,
 				051983D72460145D00AB5E75 /* Info.plist */,
+				05AEC5AD2460748400C35A0F /* MusicPlayerManager.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -83,9 +93,27 @@
 		051983DF2460157C00AB5E75 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				051983CD2460145D00AB5E75 /* ViewController.swift */,
+				0574E4AC246023E70081FCD0 /* View */,
+				051983CD2460145D00AB5E75 /* MainScreenViewController.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		0574E4AC246023E70081FCD0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0574E4AD246024030081FCD0 /* MainScreenView.swift */,
+				05AEC5A524602F7500C35A0F /* MusicControlView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		05AEC5A8246034B800C35A0F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				05AEC5A9246034E600C35A0F /* UIView+TabataTimer.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,9 +186,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				051983CE2460145D00AB5E75 /* ViewController.swift in Sources */,
+				051983CE2460145D00AB5E75 /* MainScreenViewController.swift in Sources */,
+				05AEC5AE2460748400C35A0F /* MusicPlayerManager.swift in Sources */,
+				05AEC5A624602F7500C35A0F /* MusicControlView.swift in Sources */,
 				051983CA2460145D00AB5E75 /* AppDelegate.swift in Sources */,
 				051983CC2460145D00AB5E75 /* SceneDelegate.swift in Sources */,
+				0574E4AE246024030081FCD0 /* MainScreenView.swift in Sources */,
+				05AEC5AA246034E600C35A0F /* UIView+TabataTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
