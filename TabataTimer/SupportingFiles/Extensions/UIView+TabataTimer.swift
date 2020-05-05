@@ -8,11 +8,31 @@
 
 import UIKit
 
+//MARK: Appearence
+
+extension UIView {
+    
+    func rounded<T: UIView>(_ cornerRadius: CGFloat) -> T! {
+        guard let v = self as? T else { assertionFailure("Incorrect type"); return nil }
+        v.clipsToBounds = true
+        v.layer.cornerRadius = cornerRadius
+        return v
+    }
+    
+    func bordered<T: UIView>(_ width: CGFloat, color: UIColor) -> T! {
+        guard let v = self as? T else { assertionFailure("Incorrect type"); return nil }
+        v.layer.borderWidth = width
+        v.layer.borderColor = color.cgColor
+        return v
+    }
+    
+}
+
 //MARK: Subview
 
 extension UIView {
     
-    func addSubviews(subviews: UIView ...) {
+    func addSubviews(_ subviews: UIView ...) {
         subviews.forEach {
             addSubview($0)
         }
@@ -24,25 +44,40 @@ extension UIView {
 
 extension UIView {
     
+    
+    /// Set width and height anchors to constat size
+    /// - Parameter size: Width and height constant sizes CGSize
     func setSizeAnchor(size: CGSize) {
-        setAnchors(width: size.width, height: size.height)
+        setAnchors(widthConstant: size.width, heightConstant: size.height)
     }
     
+    /// Set top, bottom, leading and trailing anchors to superview anchors
     func fillInSuperview() {
         guard let superview = self.superview else { fatalError("Can't obtain superview") }
         setAnchors(top: superview.topAnchor, bottom: superview.bottomAnchor, leading: superview.leadingAnchor, trailing: superview.trailingAnchor)
     }
     
-    func setCenterAnchor(centerX: NSLayoutXAxisAnchor? = nil, centerXMultiplier: CGFloat = 1, centerY: NSLayoutYAxisAnchor? = nil, centerYMultiplier: CGFloat = 1) {
+    /// Center anchors. If parameters equal to nil then will be set to superview center anchors
+    /// - Parameters:
+    ///   - centerX: centerX anchor NSLayoutXAxisAnchor
+    ///   - centerY: centerY anchor NSLayoutYAxisAnchor
+    func setCenterAnchor(centerX: NSLayoutXAxisAnchor? = nil, centerY: NSLayoutYAxisAnchor? = nil) {
         translatesAutoresizingMaskIntoConstraints = false
-        if let centerX = centerX {
-            centerXAnchor.constraint(equalTo: centerX).isActive = true
-        }
-        if let centerY = centerY {
-            centerYAnchor.constraint(equalTo: centerY).isActive = true
+        if centerX == nil, centerY == nil {
+            guard let superview = self.superview else { return }
+            centerXAnchor.constraint(equalTo: superview.centerXAnchor).isActive = true
+            centerYAnchor.constraint(equalTo: superview.centerYAnchor).isActive = true
+        } else {
+            if let centerX = centerX {
+                centerXAnchor.constraint(equalTo: centerX).isActive = true
+            }
+            if let centerY = centerY {
+                centerYAnchor.constraint(equalTo: centerY).isActive = true
+            }
         }
     }
     
+    /// Required anchors for view
     func setAnchors(top: NSLayoutYAxisAnchor? = nil,
                     topPadding: CGFloat = 0.0,
                     bottom: NSLayoutYAxisAnchor? = nil,
@@ -51,8 +86,12 @@ extension UIView {
                     leadingPadding: CGFloat = 0.0,
                     trailing: NSLayoutXAxisAnchor? = nil,
                     trailingPadding: CGFloat = 0.0,
-                    width: CGFloat? = nil,
-                    height: CGFloat? = nil) {
+                    widthAnchor: NSLayoutDimension? = nil,
+                    widthMultipler: CGFloat = 1,
+                    heightAnchor: NSLayoutDimension? = nil,
+                    heightMultipler: CGFloat = 1,
+                    widthConstant: CGFloat? = nil,
+                    heightConstant: CGFloat? = nil) {
         
         translatesAutoresizingMaskIntoConstraints = false
         if let top = top {
@@ -67,11 +106,17 @@ extension UIView {
         if let trailing = trailing {
             trailing.constraint(equalTo: trailingAnchor, constant: trailingPadding).isActive = true
         }
-        if let width = width {
-            widthAnchor.constraint(equalToConstant: width).isActive = true
+        if let width = widthConstant {
+            self.widthAnchor.constraint(equalToConstant: width).isActive = true
         }
-        if let height = height {
-            heightAnchor.constraint(equalToConstant: height).isActive = true
+        if let height = heightConstant {
+            self.heightAnchor.constraint(equalToConstant: height).isActive = true
+        }
+        if let widthAnchor = widthAnchor {
+            self.widthAnchor.constraint(equalTo: widthAnchor, multiplier: widthMultipler).isActive = true
+        }
+        if let heightAnchor = heightAnchor {
+            self.heightAnchor.constraint(equalTo: heightAnchor, multiplier: heightMultipler).isActive = true
         }
     }
     

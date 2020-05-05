@@ -27,13 +27,23 @@ class MainScreenView : UIView {
         return v
     }()
     
+    lazy var progressView : CircleProgressView = {
+        let v = CircleProgressView()
+        return v
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .systemBackground
-        addSubview(musicControlView)
-        musicControlView.setAnchors(top: safeAreaLayoutGuide.topAnchor, topPadding: 20, leading: leadingAnchor, leadingPadding: 20, trailing: trailingAnchor, trailingPadding: 20, height: 45)
+        addSubviews(musicControlView, progressView)
+        musicControlView.setAnchors(top: safeAreaLayoutGuide.topAnchor, topPadding: 20, leading: leadingAnchor, leadingPadding: 20, trailing: trailingAnchor, trailingPadding: 20, heightConstant: 45)
         musicControlView.playPauseButton.addTarget(self, action: #selector(playPauseButtonAction), for: .touchUpInside)
         musicControlView.nextButton.addTarget(self, action: #selector(nextSongButtonAction), for: .touchUpInside)
+        progressView.setAnchors(leading: leadingAnchor, leadingPadding: 20, trailing: trailingAnchor, trailingPadding: 20, heightAnchor: progressView.widthAnchor)
+        progressView.setCenterAnchor(centerX: centerXAnchor, centerY: centerYAnchor)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            self.progressView.progress = 0.3
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -49,13 +59,8 @@ extension MainScreenView {
     func prepareMusicControlPanel(songName: String, artistName: String? = nil, albumImage: UIImage? = nil) {
         musicControlView.songNameLabel.text = songName
         musicControlView.artistNameLabel.text = artistName
-        if let image = albumImage {
-            musicControlView.albumImageImageView.layer.borderWidth = 0
-            musicControlView.albumImageImageView.image = image
-        } else {
-            musicControlView.albumImageImageView.layer.borderWidth = 1
-            musicControlView.albumImageImageView.image = UIImage(systemName: "music.note")
-        }
+        musicControlView.albumImageImageView.image = albumImage
+        musicControlView.albumImageImageView.layer.borderWidth = albumImage == nil ? 2 : 0
     }
 
     func setPlaybackState(_ state: PlayButtonState) {

@@ -16,6 +16,9 @@
 		05AEC5A624602F7500C35A0F /* MusicControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AEC5A524602F7500C35A0F /* MusicControlView.swift */; };
 		05AEC5AA246034E600C35A0F /* UIView+TabataTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AEC5A9246034E600C35A0F /* UIView+TabataTimer.swift */; };
 		05AEC5AE2460748400C35A0F /* MusicPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AEC5AD2460748400C35A0F /* MusicPlayerManager.swift */; };
+		05AEC5B52460A8B300C35A0F /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AEC5B42460A8B300C35A0F /* CircleProgressView.swift */; };
+		05DBB7BC24615C140042E8B6 /* UIColor+TabataTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DBB7BB24615C140042E8B6 /* UIColor+TabataTimer.swift */; };
+		05DBB7BE24616C140042E8B6 /* CGFloat+TabataTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DBB7BD24616C140042E8B6 /* CGFloat+TabataTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		05AEC5A524602F7500C35A0F /* MusicControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicControlView.swift; sourceTree = "<group>"; };
 		05AEC5A9246034E600C35A0F /* UIView+TabataTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TabataTimer.swift"; sourceTree = "<group>"; };
 		05AEC5AD2460748400C35A0F /* MusicPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerManager.swift; sourceTree = "<group>"; };
+		05AEC5B42460A8B300C35A0F /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
+		05DBB7BB24615C140042E8B6 /* UIColor+TabataTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+TabataTimer.swift"; sourceTree = "<group>"; };
+		05DBB7BD24616C140042E8B6 /* CGFloat+TabataTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+TabataTimer.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +99,7 @@
 		051983DF2460157C00AB5E75 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				0574E4AC246023E70081FCD0 /* View */,
-				051983CD2460145D00AB5E75 /* MainScreenViewController.swift */,
+				05AEC5B32460A81A00C35A0F /* MainScreen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -104,6 +109,7 @@
 			children = (
 				0574E4AD246024030081FCD0 /* MainScreenView.swift */,
 				05AEC5A524602F7500C35A0F /* MusicControlView.swift */,
+				05AEC5B42460A8B300C35A0F /* CircleProgressView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -112,8 +118,19 @@
 			isa = PBXGroup;
 			children = (
 				05AEC5A9246034E600C35A0F /* UIView+TabataTimer.swift */,
+				05DBB7BB24615C140042E8B6 /* UIColor+TabataTimer.swift */,
+				05DBB7BD24616C140042E8B6 /* CGFloat+TabataTimer.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		05AEC5B32460A81A00C35A0F /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				051983CD2460145D00AB5E75 /* MainScreenViewController.swift */,
+				0574E4AC246023E70081FCD0 /* View */,
+			);
+			path = MainScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,8 +206,11 @@
 				051983CE2460145D00AB5E75 /* MainScreenViewController.swift in Sources */,
 				05AEC5AE2460748400C35A0F /* MusicPlayerManager.swift in Sources */,
 				05AEC5A624602F7500C35A0F /* MusicControlView.swift in Sources */,
+				05DBB7BE24616C140042E8B6 /* CGFloat+TabataTimer.swift in Sources */,
 				051983CA2460145D00AB5E75 /* AppDelegate.swift in Sources */,
+				05DBB7BC24615C140042E8B6 /* UIColor+TabataTimer.swift in Sources */,
 				051983CC2460145D00AB5E75 /* SceneDelegate.swift in Sources */,
+				05AEC5B52460A8B300C35A0F /* CircleProgressView.swift in Sources */,
 				0574E4AE246024030081FCD0 /* MainScreenView.swift in Sources */,
 				05AEC5AA246034E600C35A0F /* UIView+TabataTimer.swift in Sources */,
 			);
