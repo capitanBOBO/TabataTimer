@@ -48,7 +48,7 @@ extension MainScreenViewController : MainScreenViewDelegate {
     }
     
     func editTimerButtonAction() {
-        
+        present(SettingsScreenViewController(), animated: true, completion: nil)
     }
     
     func playPauseButtonAction() {
