@@ -11,6 +11,10 @@ import UIKit
 protocol MainScreenViewDelegate : class {
     func playPauseButtonAction()
     func nextSongButtonAction()
+    func startTimerButtonAction()
+    func pauseTimerButtonAction()
+    func stopTimerButtonAction()
+    func editTimerButtonAction()
 }
 
 class MainScreenView : UIView {
@@ -22,28 +26,28 @@ class MainScreenView : UIView {
     
     weak var delegate: MainScreenViewDelegate?
     
-    lazy var musicControlView : MusicControlView = {
-        let v = MusicControlView()
-        return v
-    }()
+    lazy var musicControlView : MusicControlView = MusicControlView()
     
-    lazy var progressView : CircleProgressView = {
-        let v = CircleProgressView()
-        return v
-    }()
+    lazy var progressView : CircleProgressView = CircleProgressView()
+    
+    lazy var bottomControlPanelView : BottomControlPanelView = BottomControlPanelView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .systemBackground
-        addSubviews(musicControlView, progressView)
+        backgroundColor = .tertiarySystemBackground
+        addSubviews(musicControlView, progressView, bottomControlPanelView)
         musicControlView.setAnchors(top: safeAreaLayoutGuide.topAnchor, topPadding: 20, leading: leadingAnchor, leadingPadding: 20, trailing: trailingAnchor, trailingPadding: 20, heightConstant: 45)
         musicControlView.playPauseButton.addTarget(self, action: #selector(playPauseButtonAction), for: .touchUpInside)
         musicControlView.nextButton.addTarget(self, action: #selector(nextSongButtonAction), for: .touchUpInside)
+        
         progressView.setAnchors(leading: leadingAnchor, leadingPadding: 20, trailing: trailingAnchor, trailingPadding: 20, heightAnchor: progressView.widthAnchor)
         progressView.setCenterAnchor(centerX: centerXAnchor, centerY: centerYAnchor)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            self.progressView.progress = 0.3
-        }
+        
+        bottomControlPanelView.setAnchors(bottom: safeAreaLayoutGuide.bottomAnchor, bottomPadding: 20, leading: leadingAnchor, leadingPadding: 20, trailing: trailingAnchor, trailingPadding: 20)
+        bottomControlPanelView.startTimerButton.addTarget(self, action: #selector(startTimerButtonAction), for: .touchUpInside)
+        bottomControlPanelView.editTimerButton.addTarget(self, action: #selector(editTimerButtonAction), for: .touchUpInside)
+        bottomControlPanelView.stopTimerButton.addTarget(self, action: #selector(stopTimerButtonAction), for: .touchUpInside)
+        bottomControlPanelView.pauseTimerButton.addTarget(self, action: #selector(pauseTimerButtonAction), for: .touchUpInside)
     }
     
     required init?(coder: NSCoder) {
@@ -73,10 +77,28 @@ extension MainScreenView {
 
 extension MainScreenView {
     @objc func playPauseButtonAction() {
-           delegate?.playPauseButtonAction()
-       }
-       
-       @objc func nextSongButtonAction() {
-           delegate?.nextSongButtonAction()
-       }
+        delegate?.playPauseButtonAction()
+    }
+    
+    @objc func nextSongButtonAction() {
+        delegate?.nextSongButtonAction()
+    }
+    
+    @objc func startTimerButtonAction() {
+        delegate?.startTimerButtonAction()
+        bottomControlPanelView.toggleState()
+    }
+    
+    @objc func editTimerButtonAction() {
+        delegate?.editTimerButtonAction()
+    }
+    
+    @objc func stopTimerButtonAction() {
+        delegate?.stopTimerButtonAction()
+        bottomControlPanelView.toggleState()
+    }
+    
+    @objc func pauseTimerButtonAction() {
+        delegate?.pauseTimerButtonAction()
+    }
 }

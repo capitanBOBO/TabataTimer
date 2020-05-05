@@ -8,7 +8,7 @@
 
 import UIKit
 
-//MARK: Appearence
+//MARK: Appearence UIView
 
 extension UIView {
     
@@ -23,6 +23,27 @@ extension UIView {
         guard let v = self as? T else { assertionFailure("Incorrect type"); return nil }
         v.layer.borderWidth = width
         v.layer.borderColor = color.cgColor
+        return v
+    }
+    
+}
+
+//MARK: Appearence UIButton
+
+extension UIButton {
+    
+    /// Default rounded and bordered button
+    /// - Parameters:
+    ///   - title: Button title
+    ///   - image: Button image
+    ///   - state: Button state, .normal by default
+    /// - Returns: Default rounded and bordered button
+    static func defaultButton(title: String? = nil, image: UIImage? = nil) -> UIButton {
+        let v: UIButton = UIButton().rounded(15).bordered(2, color: .systemBlue)
+        v.setTitleColor(.systemBlue, for: .normal)
+        v.titleLabel?.font = .systemFont(ofSize: 17, weight: .semibold)
+        v.setTitle(title, for: .normal)
+        v.setImage(image, for: .normal)
         return v
     }
     

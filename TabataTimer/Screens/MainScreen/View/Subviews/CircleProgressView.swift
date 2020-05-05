@@ -38,17 +38,17 @@ class ProgressCanvasView : UIView {
     
     private func drawProgressLine() {
         let center = CGPoint(x: bounds.width/2, y: bounds.height/2)
-        let radius = bounds.width/2 - 10
+        let radius = bounds.width/2 - 20
         let path = UIBezierPath(arcCenter: center, radius: radius, startAngle: 0, endAngle: self.endAngle, clockwise: true)
-        path.lineWidth = 10
+        path.lineWidth = 12
         path.lineCapStyle = .round
         UIColor.circleProgressGreen.setStroke()
         path.stroke()
     }
     
     private func drawBackgroundCircle() {
-        let path = UIBezierPath(ovalIn: .init(x: 10, y: 10, width: bounds.width-20, height: bounds.height-20))
-        path.lineWidth = 10
+        let path = UIBezierPath(ovalIn: .init(x: 20, y: 20, width: bounds.width-40, height: bounds.height-40))
+        path.lineWidth = 12
         UIColor.circleProgressGreenWithAlpha.setStroke()
         path.stroke()
     }
@@ -95,7 +95,7 @@ class CircleProgressView : UIView {
     }
     
     private func customInit() {
-        backgroundColor = .systemBackground
+        backgroundColor = .clear
         let containerView = UIView()
         containerView.backgroundColor = .clear
         containerView.addSubviews(timerLabel, stateLabel)

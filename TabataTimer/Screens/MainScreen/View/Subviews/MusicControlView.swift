@@ -42,17 +42,13 @@ class MusicControlView : UIView {
     }()
     
     lazy var playPauseButton : UIButton = {
-        let v: UIButton = UIButton().rounded(15).bordered(2, color: .systemBlue)
+        let v = UIButton.defaultButton()
         v.setImage(UIImage(systemName: "play.fill"), for: .normal)
         v.setImage(UIImage(systemName: "pause.fill"), for: .selected)
         return v
     }()
     
-    lazy var nextButton : UIButton = {
-        let v: UIButton = UIButton().rounded(15).bordered(2, color: .systemBlue)
-        v.setImage(UIImage(systemName: "forward.end.alt.fill"), for: .normal)
-        return v
-    }()
+    lazy var nextButton : UIButton = UIButton.defaultButton(image: UIImage(systemName: "forward.end.alt.fill"))
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -64,7 +60,9 @@ class MusicControlView : UIView {
     }
     
     private func customInit() {
+        backgroundColor = .clear
         let containerView = UIView()
+        containerView.backgroundColor = .clear
         addSubviews(emptyAlbumImageView, albumImageImageView, nextButton, playPauseButton, containerView)
         albumImageImageView.setAnchors(leading: leadingAnchor, widthConstant: 45, heightConstant: 45)
         albumImageImageView.setCenterAnchor(centerY: centerYAnchor)
@@ -72,7 +70,7 @@ class MusicControlView : UIView {
         emptyAlbumImageView.setCenterAnchor(centerX: albumImageImageView.centerXAnchor, centerY: albumImageImageView.centerYAnchor)
         nextButton.setAnchors(trailing: trailingAnchor, widthConstant: 45, heightConstant: 45)
         nextButton.setCenterAnchor(centerY: centerYAnchor)
-        playPauseButton.setAnchors(trailing: nextButton.leadingAnchor, trailingPadding: 5, widthConstant: 45, heightConstant: 45)
+        playPauseButton.setAnchors(trailing: nextButton.leadingAnchor, trailingPadding: 10, widthConstant: 45, heightConstant: 45)
         playPauseButton.setCenterAnchor(centerY: centerYAnchor)
         containerView.setAnchors(leading: albumImageImageView.trailingAnchor, leadingPadding: 15, trailing: playPauseButton.leadingAnchor, trailingPadding: 15, heightConstant: 45)
         containerView.addSubviews(songNameLabel, artistNameLabel)

@@ -35,6 +35,22 @@ class MainScreenViewController: UIViewController {
 //MARK: MainScreenView Delegate
 
 extension MainScreenViewController : MainScreenViewDelegate {
+    func startTimerButtonAction() {
+        
+    }
+    
+    func pauseTimerButtonAction() {
+        
+    }
+    
+    func stopTimerButtonAction() {
+        
+    }
+    
+    func editTimerButtonAction() {
+        
+    }
+    
     func playPauseButtonAction() {
         musicPlayerManager.playStateToggle()
     }
