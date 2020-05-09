@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050D2E8324632A3400B24844 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050D2E8224632A3400B24844 /* SettingsManager.swift */; };
 		051983CA2460145D00AB5E75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051983C92460145D00AB5E75 /* AppDelegate.swift */; };
 		051983CC2460145D00AB5E75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051983CB2460145D00AB5E75 /* SceneDelegate.swift */; };
 		051983CE2460145D00AB5E75 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051983CD2460145D00AB5E75 /* MainScreenViewController.swift */; };
@@ -26,7 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		051983C62460145D00AB5E75 /* TabataTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabataTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		050D2E8224632A3400B24844 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		051983C62460145D00AB5E75 /* Tabata Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tabata Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		051983C92460145D00AB5E75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		051983CB2460145D00AB5E75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		051983CD2460145D00AB5E75 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +70,7 @@
 		051983C72460145D00AB5E75 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				051983C62460145D00AB5E75 /* TabataTimer.app */,
+				051983C62460145D00AB5E75 /* Tabata Timer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,6 +93,7 @@
 				051983CB2460145D00AB5E75 /* SceneDelegate.swift */,
 				051983D72460145D00AB5E75 /* Info.plist */,
 				05AEC5AD2460748400C35A0F /* MusicPlayerManager.swift */,
+				050D2E8224632A3400B24844 /* SettingsManager.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -194,7 +197,7 @@
 			);
 			name = TabataTimer;
 			productName = TabataTimer;
-			productReference = 051983C62460145D00AB5E75 /* TabataTimer.app */;
+			productReference = 051983C62460145D00AB5E75 /* Tabata Timer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -258,6 +261,7 @@
 				05DBB7BC24615C140042E8B6 /* UIColor+TabataTimer.swift in Sources */,
 				051983CC2460145D00AB5E75 /* SceneDelegate.swift in Sources */,
 				05A0A6692461B4D0006428E0 /* SettingsFieldView.swift in Sources */,
+				050D2E8324632A3400B24844 /* SettingsManager.swift in Sources */,
 				05AEC5B52460A8B300C35A0F /* CircleProgressView.swift in Sources */,
 				0574E4AE246024030081FCD0 /* MainScreenView.swift in Sources */,
 				05AEC5AA246034E600C35A0F /* UIView+TabataTimer.swift in Sources */,
@@ -404,7 +408,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ivanSavin.TabataTimer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tabata Timer";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -422,7 +426,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ivanSavin.TabataTimer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tabata Timer";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

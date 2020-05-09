@@ -10,7 +10,11 @@ import UIKit
 
 extension UIColor {
     
-    static var circleProgressGreen : UIColor = UIColor(red: 117/255.0, green: 248/255.0, blue: 186/255.0, alpha: 1)
-    static var circleProgressGreenWithAlpha : UIColor = UIColor(red: 117/255.0, green: 248/255.0, blue: 186/255.0, alpha: 0.3)
-    
+    static var circleProgressGreen = UIColor(red: 116/255.0, green: 244/255.0, blue: 183/255.0, alpha: 1)
+    static var circleProgressGreenWithAlpha = UIColor.circleProgressGreen.withAlphaComponent(0.3)
+    static var circleProgressRed = UIColor.systemPink
+    static var circleProgressRedWithAlpha = UIColor.circleProgressRed.withAlphaComponent(0.3)
+    static var circleProgressYellow = UIColor.systemOrange
+    static var circleProgressYellowWithAlpha = UIColor.circleProgressYellow.withAlphaComponent(0.3)
+    static var defaultButtonCollor = UIColor.systemTeal
 }

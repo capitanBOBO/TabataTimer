@@ -39,8 +39,9 @@ extension UIButton {
     ///   - state: Button state, .normal by default
     /// - Returns: Default rounded and bordered button
     static func defaultButton(title: String? = nil, image: UIImage? = nil) -> UIButton {
-        let v: UIButton = UIButton().rounded(15).bordered(2, color: .systemBlue)
-        v.setTitleColor(.systemBlue, for: .normal)
+        let v: UIButton = UIButton().rounded(15).bordered(2, color: .defaultButtonCollor)
+        v.setTitleColor(.defaultButtonCollor, for: .normal)
+        v.tintColor = .defaultButtonCollor
         v.titleLabel?.font = .systemFont(ofSize: 17, weight: .semibold)
         v.setTitle(title, for: .normal)
         v.setImage(image, for: .normal)

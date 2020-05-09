@@ -11,7 +11,7 @@ import UIKit
 class MusicControlView : UIView {
     
     lazy var albumImageImageView : UIImageView = {
-        let v: UIImageView = UIImageView().rounded(15).bordered(2, color: .systemBlue)
+        let v: UIImageView = UIImageView().rounded(15).bordered(2, color: .defaultButtonCollor)
         v.contentMode = .scaleAspectFit
         return v
     }()
@@ -19,6 +19,7 @@ class MusicControlView : UIView {
     lazy var emptyAlbumImageView : UIImageView = {
         let v = UIImageView()
         v.image = UIImage(systemName: "music.note")
+        v.tintColor = .defaultButtonCollor
         v.contentMode = .scaleAspectFit
         return v
     }()

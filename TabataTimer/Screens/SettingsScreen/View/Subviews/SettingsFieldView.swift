@@ -10,15 +10,20 @@ import UIKit
 
 class SettingsFieldView : UIView {
     
+    var increaseBlock:((SettingsFieldView)->())?
+    var decreaseBlock:((SettingsFieldView)->())?
+    
     lazy var minusButton: UIButton = {
-        let v: UIButton = UIButton().rounded(22.5).bordered(2, color: .systemBlue)
+        let v: UIButton = UIButton().rounded(22.5).bordered(2, color: .defaultButtonCollor)
         v.setImage(UIImage(systemName: "minus"), for: .normal)
+        v.tintColor = .defaultButtonCollor
         return v
     }()
     
     lazy var plusButton: UIButton = {
-        let v: UIButton = UIButton().rounded(22.5).bordered(2, color: .systemBlue)
+        let v: UIButton = UIButton().rounded(22.5).bordered(2, color: .defaultButtonCollor)
         v.setImage(UIImage(systemName: "plus"), for: .normal)
+        v.tintColor = .defaultButtonCollor
         return v
     }()
     
@@ -35,6 +40,7 @@ class SettingsFieldView : UIView {
         let v = UILabel()
         v.font = .systemFont(ofSize: 34, weight: .bold)
         v.textAlignment = .right
+        v.text = "0"
         return v
     }()
     
@@ -53,7 +59,7 @@ class SettingsFieldView : UIView {
         containerView.backgroundColor = .clear
         containerView.addSubviews(valueLabel, unitLabel)
         let separatorView = UIView()
-        separatorView.backgroundColor = .systemBlue
+        separatorView.backgroundColor = .defaultButtonCollor
         addSubviews(containerView, minusButton, plusButton, titleLabel, separatorView)
         valueLabel.setAnchors(top:containerView.topAnchor, bottom: containerView.bottomAnchor, leading: containerView.leadingAnchor)
         unitLabel.setAnchors(top: containerView.topAnchor, bottom: containerView.bottomAnchor, leading: valueLabel.trailingAnchor, leadingPadding: 5, trailing: containerView.trailingAnchor)
@@ -63,6 +69,15 @@ class SettingsFieldView : UIView {
         containerView.setCenterAnchor(centerX: centerXAnchor, centerY: minusButton.centerYAnchor)
         titleLabel.setAnchors(top: topAnchor, bottom: minusButton.topAnchor, bottomPadding: 10)
         titleLabel.setCenterAnchor(centerX: centerXAnchor)
+        minusButton.addTarget(self, action: #selector(decreaseValue), for: .touchUpInside)
+        plusButton.addTarget(self, action: #selector(increaseValue), for: .touchUpInside)
     }
     
+    @objc private func increaseValue() {
+        increaseBlock?(self)
+    }
+    
+    @objc private func decreaseValue() {
+        decreaseBlock?(self)
+    }
 }

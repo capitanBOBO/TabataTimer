@@ -11,6 +11,7 @@ import UIKit
 class MainScreenViewController: UIViewController {
 
     private let musicPlayerManager = MusicPlayerManager()
+    private var sec: CGFloat = 0
 
     lazy var thisView : MainScreenView = {
         let v = MainScreenView()
@@ -36,7 +37,17 @@ class MainScreenViewController: UIViewController {
 
 extension MainScreenViewController : MainScreenViewDelegate {
     func startTimerButtonAction() {
-        
+        let timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
+            DispatchQueue.main.async {
+                if self.sec <= 60 {
+                    self.sec += 1
+                    self.thisView.progressView.progress = self.sec/60
+                } else {
+                    self.thisView.progressView.progress = 0
+                    timer.invalidate()
+                }
+            }
+        }
     }
     
     func pauseTimerButtonAction() {
