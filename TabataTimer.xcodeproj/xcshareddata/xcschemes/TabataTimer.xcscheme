@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "051983C52460145D00AB5E75"
-               BuildableName = "TabataTimer.app"
+               BuildableName = "Tabata Timer.app"
                BlueprintName = "TabataTimer"
                ReferencedContainer = "container:TabataTimer.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "051983C52460145D00AB5E75"
-            BuildableName = "TabataTimer.app"
+            BuildableName = "Tabata Timer.app"
             BlueprintName = "TabataTimer"
             ReferencedContainer = "container:TabataTimer.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "051983C52460145D00AB5E75"
-            BuildableName = "TabataTimer.app"
+            BuildableName = "Tabata Timer.app"
             BlueprintName = "TabataTimer"
             ReferencedContainer = "container:TabataTimer.xcodeproj">
          </BuildableReference>

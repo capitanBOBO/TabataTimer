@@ -10,20 +10,14 @@
 		050D2E8324632A3400B24844 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050D2E8224632A3400B24844 /* SettingsManager.swift */; };
 		051983CA2460145D00AB5E75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051983C92460145D00AB5E75 /* AppDelegate.swift */; };
 		051983CC2460145D00AB5E75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051983CB2460145D00AB5E75 /* SceneDelegate.swift */; };
-		051983CE2460145D00AB5E75 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051983CD2460145D00AB5E75 /* MainScreenViewController.swift */; };
+		051983CE2460145D00AB5E75 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051983CD2460145D00AB5E75 /* MainScreenView.swift */; };
 		051983D32460145D00AB5E75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 051983D22460145D00AB5E75 /* Assets.xcassets */; };
 		051983D62460145D00AB5E75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 051983D42460145D00AB5E75 /* LaunchScreen.storyboard */; };
-		0574E4AE246024030081FCD0 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0574E4AD246024030081FCD0 /* MainScreenView.swift */; };
-		05A0A6652461AEC6006428E0 /* SettingsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A0A6642461AEC6006428E0 /* SettingsScreenViewController.swift */; };
-		05A0A6692461B4D0006428E0 /* SettingsFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A0A6682461B4D0006428E0 /* SettingsFieldView.swift */; };
-		05A0A66B2461C003006428E0 /* SettingsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A0A66A2461C003006428E0 /* SettingsScreenView.swift */; };
-		05AEC5A624602F7500C35A0F /* MusicControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AEC5A524602F7500C35A0F /* MusicControlView.swift */; };
+		05A0A6652461AEC6006428E0 /* SettingsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A0A6642461AEC6006428E0 /* SettingsScreenView.swift */; };
 		05AEC5AA246034E600C35A0F /* UIView+TabataTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AEC5A9246034E600C35A0F /* UIView+TabataTimer.swift */; };
 		05AEC5AE2460748400C35A0F /* MusicPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AEC5AD2460748400C35A0F /* MusicPlayerManager.swift */; };
-		05AEC5B52460A8B300C35A0F /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AEC5B42460A8B300C35A0F /* CircleProgressView.swift */; };
 		05DBB7BC24615C140042E8B6 /* UIColor+TabataTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DBB7BB24615C140042E8B6 /* UIColor+TabataTimer.swift */; };
 		05DBB7BE24616C140042E8B6 /* CGFloat+TabataTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DBB7BD24616C140042E8B6 /* CGFloat+TabataTimer.swift */; };
-		05DBB7C0246181BE0042E8B6 /* BottomControlPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DBB7BF246181BE0042E8B6 /* BottomControlPanelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,21 +25,15 @@
 		051983C62460145D00AB5E75 /* Tabata Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tabata Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		051983C92460145D00AB5E75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		051983CB2460145D00AB5E75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		051983CD2460145D00AB5E75 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		051983CD2460145D00AB5E75 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		051983D22460145D00AB5E75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		051983D52460145D00AB5E75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		051983D72460145D00AB5E75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0574E4AD246024030081FCD0 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
-		05A0A6642461AEC6006428E0 /* SettingsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenViewController.swift; sourceTree = "<group>"; };
-		05A0A6682461B4D0006428E0 /* SettingsFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFieldView.swift; sourceTree = "<group>"; };
-		05A0A66A2461C003006428E0 /* SettingsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenView.swift; sourceTree = "<group>"; };
-		05AEC5A524602F7500C35A0F /* MusicControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicControlView.swift; sourceTree = "<group>"; };
+		05A0A6642461AEC6006428E0 /* SettingsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenView.swift; sourceTree = "<group>"; };
 		05AEC5A9246034E600C35A0F /* UIView+TabataTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TabataTimer.swift"; sourceTree = "<group>"; };
 		05AEC5AD2460748400C35A0F /* MusicPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerManager.swift; sourceTree = "<group>"; };
-		05AEC5B42460A8B300C35A0F /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 		05DBB7BB24615C140042E8B6 /* UIColor+TabataTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+TabataTimer.swift"; sourceTree = "<group>"; };
 		05DBB7BD24616C140042E8B6 /* CGFloat+TabataTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+TabataTimer.swift"; sourceTree = "<group>"; };
-		05DBB7BF246181BE0042E8B6 /* BottomControlPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControlPanelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,39 +104,12 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		0574E4AC246023E70081FCD0 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				05DBB7C124619D600042E8B6 /* Subviews */,
-				0574E4AD246024030081FCD0 /* MainScreenView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		05A0A6632461AABA006428E0 /* SettingsScreen */ = {
 			isa = PBXGroup;
 			children = (
-				05A0A6662461B4A6006428E0 /* View */,
-				05A0A6642461AEC6006428E0 /* SettingsScreenViewController.swift */,
+				05A0A6642461AEC6006428E0 /* SettingsScreenView.swift */,
 			);
 			path = SettingsScreen;
-			sourceTree = "<group>";
-		};
-		05A0A6662461B4A6006428E0 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				05A0A6672461B4AC006428E0 /* Subviews */,
-				05A0A66A2461C003006428E0 /* SettingsScreenView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		05A0A6672461B4AC006428E0 /* Subviews */ = {
-			isa = PBXGroup;
-			children = (
-				05A0A6682461B4D0006428E0 /* SettingsFieldView.swift */,
-			);
-			path = Subviews;
 			sourceTree = "<group>";
 		};
 		05AEC5A8246034B800C35A0F /* Extensions */ = {
@@ -164,20 +125,9 @@
 		05AEC5B32460A81A00C35A0F /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				051983CD2460145D00AB5E75 /* MainScreenViewController.swift */,
-				0574E4AC246023E70081FCD0 /* View */,
+				051983CD2460145D00AB5E75 /* MainScreenView.swift */,
 			);
 			path = MainScreen;
-			sourceTree = "<group>";
-		};
-		05DBB7C124619D600042E8B6 /* Subviews */ = {
-			isa = PBXGroup;
-			children = (
-				05AEC5A524602F7500C35A0F /* MusicControlView.swift */,
-				05AEC5B42460A8B300C35A0F /* CircleProgressView.swift */,
-				05DBB7BF246181BE0042E8B6 /* BottomControlPanelView.swift */,
-			);
-			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,20 +200,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				051983CE2460145D00AB5E75 /* MainScreenViewController.swift in Sources */,
+				051983CE2460145D00AB5E75 /* MainScreenView.swift in Sources */,
 				05AEC5AE2460748400C35A0F /* MusicPlayerManager.swift in Sources */,
-				05AEC5A624602F7500C35A0F /* MusicControlView.swift in Sources */,
 				05DBB7BE24616C140042E8B6 /* CGFloat+TabataTimer.swift in Sources */,
 				051983CA2460145D00AB5E75 /* AppDelegate.swift in Sources */,
-				05A0A66B2461C003006428E0 /* SettingsScreenView.swift in Sources */,
-				05A0A6652461AEC6006428E0 /* SettingsScreenViewController.swift in Sources */,
-				05DBB7C0246181BE0042E8B6 /* BottomControlPanelView.swift in Sources */,
+				05A0A6652461AEC6006428E0 /* SettingsScreenView.swift in Sources */,
 				05DBB7BC24615C140042E8B6 /* UIColor+TabataTimer.swift in Sources */,
 				051983CC2460145D00AB5E75 /* SceneDelegate.swift in Sources */,
-				05A0A6692461B4D0006428E0 /* SettingsFieldView.swift in Sources */,
 				050D2E8324632A3400B24844 /* SettingsManager.swift in Sources */,
-				05AEC5B52460A8B300C35A0F /* CircleProgressView.swift in Sources */,
-				0574E4AE246024030081FCD0 /* MainScreenView.swift in Sources */,
 				05AEC5AA246034E600C35A0F /* UIView+TabataTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,15 +344,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N4X73VFQ6M;
+				DEVELOPMENT_TEAM = 6BM7CD8DD6;
 				INFOPLIST_FILE = TabataTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ivanSavin.TabataTimer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ISavin.TabataTimer;
 				PRODUCT_NAME = "Tabata Timer";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -418,15 +364,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N4X73VFQ6M;
+				DEVELOPMENT_TEAM = 6BM7CD8DD6;
 				INFOPLIST_FILE = TabataTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ivanSavin.TabataTimer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ISavin.TabataTimer;
 				PRODUCT_NAME = "Tabata Timer";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
